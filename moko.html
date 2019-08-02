@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3秒估算装修报价</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/rem.js"></script>
+    <!--<script src="js/style.js"></script>-->
+</head>
+<body>
+<div class="content">
+    <div class="main">
+        <img src="image/banner.png" alt="" class="banner-img">
+        <div class="style-box">
+            <!--第一步-->
+            <div class="step step-one  off">
+                <div class="step-title">请选择房屋类型与城市 1/4</div>
+                <div class="step-detail">
+                    <ul class="detail-ul ">
+                        <li class="detail-li" data-type="1">
+                            <img class="detail-img" src="image/newhouse.png" alt="">
+                            <p class="detail-text"><span class=""><i class="icon"></i>新房装修</span></p>
+                        </li>
+                        <li class="detail-li" data-type="0">
+                            <img class="detail-img" src="image/oldhouse.png" alt="">
+                            <p class="detail-text"><span class=""><i class="icon"></i>老房翻新</span></p>
+                        </li>
+                    </ul>
+                    <div class="select-city ">
+                        <i class="icon-city"></i>
+                        <i class="iconfont"></i>
+                        <select name="city" class="selectCity" id="selectCity">
+                            <option data-id="beijing" selected="selected">西城区</option>
+                            <option data-id="b-shanghai">东城区</option>
+                            <option data-id="c-shenzhen">石景山区</option>
+                            <option data-id="d-wuhan">丰台区</option>
+                            <option data-id="e-tianjin">大兴区</option>
+                            <option data-id="f-chengdu">海淀区</option>
+                            <option data-id="g-xian">通州区</option>
+                            <option data-id="h-xianyang">延庆区</option>
+                            <option data-id="i-haerbin">平谷区</option>
+                            <option data-id="j-shijiazhuang">密云区</option>
+                            <option data-id="k-dalian">昌平区</option>
+                            <option data-id="l-suzhou">顺义区</option>
+                            <option data-id="m-luohe">朝阳区</option>
+                            <option data-id="0">其它</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="next-btn">下一步</div>
+            </div>
+            <!--第二步-->
+            <div class="step step-two">
+                <div class="step-title">请选择房屋户型 2/4</div>
+                <div class="step-detail">
+                    <ul class="detail-ul ">
+                        <li class="detail-li" data-type="一居室">
+                            <img class="detail-img" src="image/1ju.png" alt="">
+                            <p class="detail-text"><span class=""><i class="icon"></i>一居室</span></p>
+                        </li>
+                        <li class="detail-li" data-type="二居室">
+                            <img class="detail-img" src="image/2ju-a.png" alt="">
+                            <p class="detail-text"><span class=""><i class="icon"></i>二居室</span></p>
+                        </li>
+                        <li class="detail-li" data-type="三居室">
+                            <img class="detail-img" src="image/3ju.png" alt="">
+                            <p class="detail-text"><span class=""><i class="icon"></i>三居室</span></p>
+                        </li>
+                        <li class="detail-li" data-type="四居室">
+                            <img class="detail-img" src="image/4ju.png" alt="">
+                            <p class="detail-text"><span class=""><i class="icon"></i>四居室</span></p>
+                        </li>
+                        <li class="detail-li" data-type="四居以上">
+                            <img class="detail-img" src="image/5ju.png" alt="">
+                            <p class="detail-text"><span class=""><i class="icon"></i>四居以上</span></p>
+                        </li>
+                        <li class="detail-li" data-type="公寓别墅">
+                            <img class="detail-img" src="image/bieshu.png" alt="" style="height: 1.56rem">
+                            <p class="detail-text"><span class=""><i class="icon"></i>公寓别墅</span></p>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="button-box">
+                    <li class="prev-btn">上一步</li>
+                    <li class="next-btn">下一步</li>
+                </ul>
+            </div>
+            <!--第三步-->
+            <div class="step step-three">
+                <div class="step-title">请选择装修类型 3/4</div>
+                <div class="step-detail">
+                    <ul class="detail-ul ">
+                        <li class="detail-li" data-type="1">
+                            <img class="detail-img" src="image/quanbao.png" alt="">
+                            <p class="detail-text"><span class=""><i class="icon"></i>全包装修</span></p>
+                        </li>
+                        <li class="detail-li" data-type="0">
+                            <img class="detail-img" src="image/banbao.png" alt="">
+                            <p class="detail-text"><span class=""><i class="icon"></i>半包装修</span></p>
+                        </li>
+                    </ul>
+                    <div class="input-box ">
+                        <i class="icon-house"></i>
+                        <i class="iconfont">㎡</i>
+                        <input type="tel" name="square" maxlength="4" placeholder="请输入房屋面积">
+                    </div>
+                </div>
+                <ul class="button-box">
+                    <li class="prev-btn">上一步</li>
+                    <li class="next-btn">下一步</li>
+                </ul>
+            </div>
+            <!--第四步-->
+            <div class="step step-four">
+                <div class="step-title">请选择装修档次 4/4</div>
+                <div class="step-detail">
+                    <ul class="detail-ul ">
+                        <li class="detail-li" data-type="0">
+                            <img class="detail-img" src="image/jianzhuang.png" alt="">
+                            <p class="detail-text"><span class=""><i class="icon"></i>简装装修</span></p>
+                        </li>
+                        <li class="detail-li" data-type="1">
+                            <img class="detail-img" src="image/jingzhuang.png" alt="">
+                            <p class="detail-text"><span class=""><i class="icon"></i>精致装修</span></p>
+                        </li>
+                    </ul>
+                    <div class="input-box ">
+                        <i class="icon-phone"></i>
+                        <input id="formPhone" type="tel" name="phone" maxlength="11" placeholder="输入手机号，接收报价明细">
+                    </div>
+                </div>
+                <div class="next-btn bigAnimation" style="margin: 0 auto;display: block;margin-top: 0.4rem">立即计算</div>
+            </div>
+            <!--第五步-->
+            <div class="step step-five">
+               <div class="step-success">
+                   稍后今朝客服进行回访
+               </div>
+            </div>
+        </div>
+    </div>
+    <a href="javascript:;" class="a-txt" style="text-align: center; display: block;">北京今朝装饰设计有限公司<br>京ICP备05028416号-1</a>
+</div>
+</body>
+</html>
+<script>
+    //第一步
+    stepOne=function () {
+        $(".step-one").find(".detail-li").off().on("mouseup", function () {
+            $(".step-one").find(".detail-li").removeClass("active");
+            $(this).addClass("active");
+            var house=$(this).find('span').text();
+            var data=$(this).attr('data-type');
+            console.log(house,data)
+        });
+        $(document).on('mouseup','.step-one .next-btn',function () {
+            if($('.step-one .detail-li').hasClass('active')==false){
+                alert('请选择房屋类型');
+            }else{
+                var city = $("#selectCity").val();
+                console.log(city)
+                $(".step-one").removeClass('off');
+                $(".step-two").addClass('off');
+            }
+        });
+    };
+    stepOne()
+    //第二步
+    stepTwo=function () {
+        $(".step-two").find(".detail-ul").find(".detail-li").off().on("mouseup", function () {
+            $(".step-two").find(".detail-ul").find(".detail-li").removeClass("active");
+            $(this).addClass("active");
+            var huxing = $(this).attr('data-type');
+            console.log(huxing)
+        });
+        $(".step-two").find('.prev-btn ').off().on("mouseup", function () {
+            $(".step-two").removeClass('off');
+            $(".step-one").addClass('off');
+
+        });
+        $(".step-two").find('.next-btn ').off().on("mouseup", function () {
+            if($('.step-two .detail-li').hasClass('active')==false){
+                alert('请选择房屋户型');
+            }else{
+                $(".step-two").removeClass('off');
+                $(".step-three").addClass('off');
+            }
+
+
+        });
+    };
+    stepTwo();
+//    第三部
+    stepThree=function () {
+        $(".step-three").find(".detail-li").off().on("mouseup", function () {
+            $(".step-three").find(".detail-li").removeClass("active");
+            $(this).addClass("active");
+            var build = $(this).attr('data-type');
+            console.log(build)
+        });
+        $(".step-three").find('.prev-btn ').off().on("mouseup", function () {
+            $(".step-three").removeClass('off');
+            $(".step-two").addClass('off');
+        });
+        $(".step-three").find('.next-btn ').off().on("mouseup", function () {
+            if($('.step-three .detail-li').hasClass('active')==false){
+                alert('请选择房屋户型');
+            }else{
+                var square = $('input[name=square]');
+                if (square.val() == '') {
+                    alert("请输入面积")
+                    return false;
+                };
+                var squarenum = square.val();
+                console.log(squarenum)
+                $(".step-three").removeClass('off');
+                $(".step-four").addClass('off');
+                $('#formPhone').focus();
+            }
+
+        });
+
+    };
+    stepThree()
+    //第四步
+    stepFour=function () {
+        $(".step-four").find(".detail-li").off().on("mouseup", function () {
+            $(".step-four").find(".detail-li").removeClass("active");
+            $(this).addClass("active");
+            var dangci = $(this).attr('data-type');
+        });
+        $(".step-four").find(".next-btn").off().on("mouseup", function () {
+            if($('.step-four .detail-li').hasClass('active')==false){
+                alert('请选择房屋户型');
+            }else{
+                var square = $('input[name=square]');
+                if (square.val() == '') {
+                    alert("请输入面积")
+                    return false;
+                };
+                var phone = $('#formPhone')
+                if (phone.val() == '') {
+                    alert("请输入手机号");
+                    return false;
+                };
+                var regTest = /^13[0-9]{1}[0-9]{8}$|15[^4]{1}[0-9]{8}$|18[0-9]{1}[0-9]{8}$|17[0-8]{1}[0-9]{8}$|14[5-9]{1}[0-9]{8}$|16[6]{1}[0-9]{8}$|19[8-9]{1}[0-9]{8}$/
+                if (!regTest.test(phone.val())) {
+                    alert("您输入的电话格式不对，请检查")
+                    return false;
+                }else{
+                    alert('报价成功')
+                };
+                $(".step-four").removeClass('off');
+                $(".step-five").addClass('off');
+            }
+        });
+
+    }
+    stepFour()
+
+</script>
